@@ -1,3 +1,5 @@
-import superclasses
+from buttons import *
+from superclasses import *
+import pygame
 
-test_img = superclasses.Image()
+test_img = Image()
