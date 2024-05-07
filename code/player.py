@@ -1,14 +1,6 @@
 import pygame, os, constans, buttons, random
-
-class Player:
-    def __init__(self, hp, dmg, df, gold):
-        self.HitPoints=hp
-        self.CurHP = self.HitPoints
-        self.Damage=dmg
-        self.Defense=df
-        self.CurDefense = 0
-        self.Gold=gold
-        self.CritChance = 25
+from superclasses import *
+class Player(Creatures):
     def attack(self):
         pass
     def defense(self):

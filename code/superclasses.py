@@ -21,3 +21,22 @@ class Image:
         self.Image = transform.scale(self.Image, (width, height))
     def show(self, screen:display):
         screen.blit(self.Image, (self.X, self.Y))
+class Creatures:
+    def __init__(self, hp, dmg, df, gold):
+        self.HitPoints=hp
+        self.CurHP = self.HitPoints
+        self.Damage=dmg
+        self.Defense=df
+        self.CurDefense = 0
+        self.Gold=gold
+        self.CritChance = 25
+    def defence(self):
+        self.CurDefense+=self.Defense
+    def attack(self, cur_enemy_defence):
+        if self.Damage>=cur_enemy_defence:
+            return self.Damage-cur_enemy_defence
+        else: 
+            return 0
+    def attacked(self, damage):
+        if damage>self.CurDefense:
+            self.CurHP-=damage-self.CurDefense
