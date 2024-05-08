@@ -1,5 +1,6 @@
 from buttons import *
 from superclasses import *
-import pygame
+import pygame, player, enemies
 
-test_img = Image()
+
+plr = player.Player(5, 2, 1, 0, Image(76*4, 61*4, "images\\portrats\\player.png", 24, 32))

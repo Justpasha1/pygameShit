@@ -1,5 +1,5 @@
 from pygame import *
-import os, constans, superclasses, buttons, images
+import os, constans, superclasses, buttons, images, global_vars
 from random import randint
 init()
 #screen init##########################
@@ -17,7 +17,7 @@ test = buttons.Buttons(41*4, 19*4, ["images\\buttons\\rectangle\\base.png","imag
 def game():
     while True:
         images.base_ui.show(screen)
-        test.show(screen)
+        global_vars.plr.Portrait.show(screen)
         for i in event.get():
             if i.type == QUIT:
                 return False
