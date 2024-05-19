@@ -43,3 +43,13 @@ class Creatures:
     def attacked(self, damage):
         if damage>self.CurDefense:
             self.CurHP-=damage-self.CurDefense
+class Text:
+    def __init__(self, x:int, y:int , size:int, font:int, text:str, color:tuple): 
+        self.X=x
+        self.Y=y
+        self.Size=size
+        self.Font=font
+        self.Text=text
+        self.Color=color
+    def ShowText(self,screen):
+        screen.blit(self.Text, (self.X, self.Y))
