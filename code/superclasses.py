@@ -35,14 +35,11 @@ class Creatures:
         self.Portrait.__init__(portrait.Width,portrait.Height, portrait.Path, portrait.X, portrait.Y)
     def defence(self):
         self.CurDefense+=self.Defense
-    def attack(self, cur_enemy_defence):
-        if self.Damage>=cur_enemy_defence:
-            return self.Damage-cur_enemy_defence
-        else: 
-            return 0
     def attacked(self, damage):
         if damage>self.CurDefense:
             self.CurHP-=damage-self.CurDefense
+        else:
+            return 0
 class Text:
     def __init__(self, x:int, y:int , size:int, Font:str, text:str, color:tuple): 
         self.X=x

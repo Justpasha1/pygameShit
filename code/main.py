@@ -28,6 +28,10 @@ def game():
         global_vars.hp_message.ShowText(screen)
         global_vars.Def_message.ShowText(screen)
         global_vars.Att_message.ShowText(screen)
+        # global_vars.hp_message.Text = str(global_vars.plr.HitPoints)
+        # global_vars.Def_message.Text = str(global_vars.plr.Defense) 
+        global_vars.succubus.Portrait.show(screen) 
+
         for i in event.get():
             if i.type == QUIT:
                 return False
@@ -35,11 +39,9 @@ def game():
                 global_vars.button_attack.click(mouse.get_pos())
                 global_vars.button_heal.click(mouse.get_pos())
                 global_vars.button_deffence.click(mouse.get_pos())
-                #test.click(mouse.get_pos())
             elif i.type == MOUSEMOTION:
                 global_vars.button_attack.hover(mouse.get_pos())
                 global_vars.button_heal.hover(mouse.get_pos())
                 global_vars.button_deffence.hover(mouse.get_pos())
-                #test.hover(mouse.get_pos())
         display.flip()
 game()
