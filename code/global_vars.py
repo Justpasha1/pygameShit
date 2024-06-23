@@ -8,7 +8,7 @@ plr = player.Player(5, 2, 1, 0, Image(76*4, 61*4, "images\\portrats\\player.png"
 # ["images\\buttons\\rectangle\\base.png","images\\buttons\\rectangle\\hover.png", "images\\buttons\\rectangle\\pressed.png"]
 
 def test():
-    print("Hello world")
+        print("Hello world")
 def Attack(Damage, cur_enemy_defence):
         cur_enemy_defence.attacked(Damage)
 def Heal(amount):
@@ -16,11 +16,11 @@ def Heal(amount):
 def Defence(Defense):
         plr.defence(Defense)
 
-button_attack = Buttons(132,150, ["images\\buttons\\rectangle\\base.png","images\\buttons\\rectangle\\hover.png", "images\\buttons\\rectangle\\pressed.png"],98*4,97*4,Attack)
+button_attack = Buttons(130,150, ["images\\buttons\\rectangle\\base.png","images\\buttons\\rectangle\\hover.png", "images\\buttons\\rectangle\\pressed.png"],398,389,Attack)
 
-button_heal = Buttons(132,150, ["images\\buttons\\rectangle\\base.png","images\\buttons\\rectangle\\hover.png", "images\\buttons\\rectangle\\pressed.png"],132*4,97*4,Heal)
+button_heal = Buttons(130,150, ["images\\buttons\\rectangle\\base.png","images\\buttons\\rectangle\\hover.png", "images\\buttons\\rectangle\\pressed.png"],529,389,Heal)
 
-button_deffence = Buttons(132,150, ["images\\buttons\\rectangle\\base.png","images\\buttons\\rectangle\\hover.png", "images\\buttons\\rectangle\\pressed.png"],166*4,97*4,Defence)
+button_deffence = Buttons(130,150, ["images\\buttons\\rectangle\\base.png","images\\buttons\\rectangle\\hover.png", "images\\buttons\\rectangle\\pressed.png"],660,389,Defence)
 
 heart_icon = Image(16*4, 16*4, "images\\icons\\hp.png", 6*4, 70*4)
 shield_icon = Image(16*4, 16*4, "images\\icons\\shield.png", 36*4, 70*4)
@@ -32,5 +32,5 @@ Att_message = Text(287,324,50, 'Comic Sans', plr.Damage, (0,0,0))
 
 
 #Enemies
-succubus = enemies.Enemies(4, 2, 0, 10, Image(100*4, 15*4, "images\\portrats\\enemy\\fuck_up_succubus.png", 24, 32 ), test)
+succubus = enemies.Enemies(4, 2, 0, 10, Image(40*4, 56*4, "images\\portrats\\enemy\\fuck_up_succubus.png", 125*4, 17*4 ), test)
 

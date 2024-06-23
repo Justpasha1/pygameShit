@@ -1,7 +1,7 @@
 import random
 
 def generate_level(width, height):
- 
+
   level = [[1 for _ in range(width)] for _ in range(height)]
 
   # Создать список свободных клеток
