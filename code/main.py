@@ -16,6 +16,7 @@ test = buttons.Buttons(41*4, 19*4, ["images\\buttons\\rectangle\\base.png","imag
 ######################################
 def game():
     while True:
+        images.caveBG.show(screen)
         images.base_ui.show(screen)
         global_vars.plr.Portrait.show(screen)
         #test.show(screen)

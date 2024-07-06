@@ -38,6 +38,7 @@ class Creatures:
     def attacked(self, damage):
         if damage>self.CurDefense:
             self.CurHP-=damage-self.CurDefense
+            print(self.CurHP)
         else:
             return 0
 class Text:
@@ -49,6 +50,8 @@ class Text:
         self.Text=text
         self.Color=color
         self.Font = font.SysFont(self.Font,self.Size)
+        self.convert()
+    def convert(self):
         self.Text = self.Font.render(str(self.Text),False,self.Color)
     def ShowText(self,screen):
         screen.blit(self.Text, (self.X, self.Y))

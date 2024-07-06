@@ -6,7 +6,11 @@ class Player(Creatures):
         super().__init__(hp, dmg, df, gold, portrait)
         self.Effects = []
     def heal(self, amount):
-        self.CurHP+=amount
+        if self.CurHP+amount>self.HitPoints:
+            CurHP=5
+        else:
+            self.CurHP+=amount
+
     def can_buy(self, amount):
         if self.Gold - amount < 0:
             return False
