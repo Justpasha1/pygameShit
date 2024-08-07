@@ -30,7 +30,7 @@ def game():
         global_vars.Def_message.ShowText(screen)
         global_vars.Att_message.ShowText(screen)
         # global_vars.hp_message.Text = str(global_vars.plr.HitPoints)
-        # global_vars.Def_message.Text = str(global_vars.plr.Defense) 
+        # global_vars.Def_message.Text = str(global_vars.plr.Defence) 
         global_vars.succubus.Portrait.show(screen) 
 
         for i in event.get():

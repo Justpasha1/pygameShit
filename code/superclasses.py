@@ -27,20 +27,14 @@ class Creatures:
         self.HitPoints=hp
         self.CurHP = self.HitPoints
         self.Damage=dmg
-        self.Defense=df
-        self.CurDefense = 0
+        self.Defence=df
+        self.CurDefence = 0
         self.Gold=gold
         self.CritChance = 25
         self.Portrait = portrait
         self.Portrait.__init__(portrait.Width,portrait.Height, portrait.Path, portrait.X, portrait.Y)
     def defence(self):
-        self.CurDefense+=self.Defense
-    def attacked(self, damage):
-        if damage>self.CurDefense:
-            self.CurHP-=damage-self.CurDefense
-            print(self.CurHP)
-        else:
-            return 0
+        self.CurDefence+=self.Defence
 class Text:
     def __init__(self, x:int, y:int , size:int, Font:str, text:str, color:tuple): 
         self.X=x
